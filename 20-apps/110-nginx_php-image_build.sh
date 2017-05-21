@@ -23,11 +23,14 @@ RUN \\
 RUN \\
     sed -ci.bak1 '\
 	/listen.*9000/s/127.0.0.1/0.0.0.0/ ; \
-	/listen.allowed_clients/s/^listen.allowed_clients/;listen.allowed_clients/ \
-    ' /opt/rh/php55/root/etc/php-fpm.d/www.conf ;
+	s/^listen.allowed_clients/;listen.allowed_clients/ \
+    ' /opt/rh/php55/root/etc/php-fpm.d/www.conf ; \
+    sed -ci.bask1 '\
+	/pid = .*/d \
+    ' /opt/rh/php55/root/etc/php-fpm.conf
 
 
-#USER apache
+USER apache
 
 EOF
 

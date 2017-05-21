@@ -2,4 +2,4 @@
 
 . $(pwd)/env.sh || exit 1
 
-curl http://$ATOMIC_HOST:8080/dstest/index.jsp
+curl -v http://$ATOMIC_HOST:8080/dstest/index.jsp

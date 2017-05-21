@@ -20,6 +20,7 @@ pause
 docker_cmd create \
     --name c-${APP_IMAGE}-n \
     -p 80:8080 \
+    -u 0 \
     --link c-${APP_IMAGE}-p:php \
     -v $WWW_DIR/nginx.conf:/nginx.conf:ro \
     -ti $USER/$APP_IMAGE:1.0 \

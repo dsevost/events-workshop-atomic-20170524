@@ -12,3 +12,5 @@ exec_cmd mv /tmp/nginx.conf $WWW_DIR
 cat sample-index.php | exec_cmd "cat - > /tmp/index.php"
 exec_cmd mv /tmp/index.php $WWW_DIR/data
 exec_cmd restorecon -R $WWW_DIR
+exec_cmd ls -lR $WWW_DIR
+pause

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. $(pwd)/docker-env.sh || exit 1
+. $(pwd)/env.sh || exit 1
 
 exec_cmd mkdir -p $VOL
 docker_cmd rm c-${MY_IMAGE}
