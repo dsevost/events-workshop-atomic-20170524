@@ -2,10 +2,10 @@
 
 #set -x
 
-LIBVIRT_IMAGES_ROOT=/volumes/btrfs/system/dsevosty-mbp/libvirt-images
+LIBVIRT_IMAGES_ROOT=${LIBVIRT_IMAGES_ROOT:-/volumes/btrfs/system/dsevosty-mbp/libvirt-images}
 
 vm=${1:-atomic01}-base
-disk=${2:-$LIBVIRT_IMAGES_ROOT/rhel-atomic-cloud-7.3.4-11.x86_64.qcow2}
+disk=$LIBVIRT_IMAGES_ROOT/${2:-rhel-atomic-cloud-7.3.4-11.x86_64.qcow2}
 
 disk_ext=qcow2
 

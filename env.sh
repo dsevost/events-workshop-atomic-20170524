@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ATOMIC_HOST=192.168.122.201
+ATOMIC_HOST=${ATOMIC_HOST:-192.168.122.201}
 ATOMIC_USER=cloud-user
 
 function exec_cmd() {
