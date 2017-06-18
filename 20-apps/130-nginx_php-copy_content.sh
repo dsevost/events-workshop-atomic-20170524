@@ -2,7 +2,7 @@
 
 . $(pwd)/env.sh || exit 1
 
-set -x
+#set -x
 
 exec_cmd rm -rf $WWW_DIR/../www
 exec_cmd mkdir -p $WWW_DIR/data

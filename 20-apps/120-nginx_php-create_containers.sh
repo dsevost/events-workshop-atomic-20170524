@@ -12,7 +12,7 @@ docker_cmd create \
     --name c-${APP_IMAGE}-p \
     -v $WWW_DIR:/www:ro \
     -ti $USER/$APP_IMAGE:1.0 \
-	opt/rh/php55/root/usr/sbin/php-fpm --nodaemonize
+	/opt/rh/php55/root/usr/sbin/php-fpm --nodaemonize
 pause
 
 #    -v $WWW_DIR:/www \
